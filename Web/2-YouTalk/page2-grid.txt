@@ -1,0 +1,2 @@
+gap 24 px
+col 78 px

@@ -1,0 +1,504 @@
+@media screen and (max-width: 1920px) {
+    .grid__layout {
+            background-image: url('../img/bigpinkbulb.png');
+            background-repeat: no-repeat;
+            background-position: 1690px 2550px;
+    }
+    .header__burger {
+        display: none;
+    }
+    .article__self {
+        display: none;
+    }
+    .button_desktop {
+        margin-left: 190px;
+    }
+    .article__content-bottom_image__right {
+        position: absolute;
+        padding-left: 1835px;
+        padding-top: 5380px;
+    }
+    
+}
+@media screen and (max-width: 1440px) {
+    .main-content__layout {
+        display: grid;
+        grid-gap: 24px;
+    } 
+    .button_desktop {
+        margin-left: 240px;
+    }
+    .article__content-content {
+        grid-template-columns: 690px;
+    }
+    .articles__box-size {
+        width: 690px;
+    }
+    .article__content-content_text {
+        width: 642px;
+    }
+    .images-item {
+        width: 333px; 
+    }
+}
+@media screen and (max-width: 1024px) {
+    .header {
+        display: flex;
+    }
+    .articles-filter {
+        display: flex;
+        margin-top: 32px;
+        flex-wrap:  wrap; 
+        gap: 8px;    
+    }
+    .body__article {
+        background-image: none;
+    }
+    .articles:nth-child(-n+3) {
+        grid-template-rows: 260px 1fr;
+        }
+
+    .main-content__layout {
+        display: grid;
+        grid-template-columns: repeat(12, 58px);
+    } 
+    .article__content-bottom_image__right {
+        display: none;
+    }
+    .header__logo {
+        width: 48px;
+    }
+    .header__burger {
+        background-color: #fff;
+        border: none;
+    }
+    .button_desktop {
+        margin-left: 10px !important;
+    }
+    .bottom__content {
+        display: none !important;
+    }
+    .section_line {
+        display: none;
+    }
+    
+    .aside__content-boxes_layout {
+        align-content: center;
+    }
+    .aside__content-boxes {
+        grid-column: 10 / 13;
+        width: 222px;
+    }
+    .aside__content-boxes__title {
+        width: 180px;
+    }
+    .aside__content-boxes_image {
+        background-image: url(../img/threepaintedpeople1024.png) !important;
+        width: 181px !important;
+        height: 145px !important;
+    }
+    .aside__content-boxes__title__list {
+        width: 180px;
+    }
+    .box-two-experience__box {
+        width: 180px;
+    }
+    .box-two-experieence__layout {
+        padding-left: 11px;
+    }
+    .aside__content-box-two__image {
+        padding: 5px 51px 16px 51px;
+    }
+    .box-one__title {
+        font-size: 18px;  
+    }
+    .box__one {
+        height: 495px !important;
+    } 
+   .box__two_title__list {
+       padding: 16px 24px 8px 24px; 
+   }
+    .box__three {
+        width: 220px;
+        height: 292px;
+    }
+    .aside__content-box-two__image {
+        transform: translateX(-10px);
+    }
+    .button__box-one {
+        width: 182px;
+    }
+    .button__box-two {
+        width: 174px;
+    }
+    .header__burger {
+        display: none;
+    }
+    .footer__layout {
+        width: 960px;
+    }
+    .footer__grid {
+        padding-top: 40px !important;
+        display: grid !important;
+        grid-template-columns: 247px 450px 122px !important;
+        column-gap: 21px !important;
+    }
+    .footer__info {
+        width: 960px;
+    }    
+    .footer__background {
+        background-image: none !important;
+    }
+}
+@media screen and (max-width: 768px) {
+       body {
+        background-image: none;
+       }
+       .header {
+        height: 76px;
+       }
+       
+       .header__menu {
+        display: none; 
+       }
+       .header__layout {
+        width: 728px;
+    }
+       .header__burger {
+        display: flex;
+        padding-left: 576px;
+       }
+       .button_desktop {
+        display: none;
+       }
+      
+    .articles:nth-child(-n+3) {
+        grid-template-rows: 404px 1fr;
+        }
+    .articles:nth-child(n+3) {
+            grid-template-rows: 206px 1fr;
+            grid-column: span 3;
+        }    
+    .main-content__layout {
+        display: grid;
+        grid-template-columns: repeat(12, 46px);
+        grid-gap: 16px;
+    } 
+    .articles:nth-child(1) {
+        grid-column: 1 / 7 !important;
+    }
+    .articles:nth-child(2) {
+        grid-column: 1 / 7 !important;
+    }
+    .articles:nth-child(2n+3) {
+        grid-column: 1 / 4 !important;
+    }
+    .articles:nth-child(2n+4) {
+        grid-column: 4 / 7 !important;
+    }
+    .article__list-subtitle_style {
+        display: none;
+    }
+    .article__content-item__subtitle {
+        display: none;
+    }
+    .article__content {
+        width: 727px;
+    }
+    .main__content {
+        grid-column: 1 / 13;
+    }
+    
+    .aside__content {
+       grid-column: 1 / 13 !important;
+       height: 759px;
+    }
+    .aside__content-layout {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        row-gap: 36px; 
+        margin-top: 0;
+
+    } 
+    .aside__content-boxes {
+        width: 356px !important;
+        border-radius: 16px;
+        border: solid 1px #DEDEDE;
+    }
+    .aside__content-boxes_layout {
+        row-gap: 16px; 
+        align-content: center;     
+        width: 310px !important;
+    }
+    .aside__content-boxes:nth-child(odd) {
+        grid-column: 1 / 6 !important;
+    }
+    .aside__content-boxes:nth-child(even) {
+        grid-column: 7 / 12 !important;
+    }
+    
+    .aside__content-boxes_image {
+        background-image: url(../img/threepaintedpeople.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 234px !important;
+        height: 206px !important;
+    }
+    .aside__content-boxes__title {
+        width: 310px;
+    }
+    .button__box-one {
+        margin-top: 24px;
+        width: 310px;
+    }
+    .box__one {
+        height: 481px !important;
+    }
+    .box-two-experieence__layout {
+       padding-left: 75px;
+    }
+    .box__two {
+        margin-top: 0;
+    }
+    .aside__content-box-two__image {
+        transform: translateX(55px);
+    }
+    .box-two-experience__box {
+        display: flex;
+        width: 310px;
+        align-items: center;
+    }
+    .aside__content-boxes__title__list {
+        width: 250px;
+    }
+    .button__box-two {
+        width: 250px;
+    }
+    .box__three {
+        border: none;
+        background-image: url(../img/dz768.png);
+        background-repeat: no-repeat;
+        margin-top: 0;
+        height: 242px;
+    }
+     .box__four {
+        width: 356px !important;
+        height: 242px !important;
+        margin-top: 0;
+        background-position: 160px 160px;
+    } 
+    .footer {
+        margin-top: 55px;
+        height: 454px !important;
+        /* width: 728px; */
+    }
+    .footer__layout {
+        width: 728px;
+       
+    }
+    .footer__grid {
+        display: grid !important;
+        grid-template-columns: 274px 450px !important;
+        grid-template-rows: repeat(3, auto);
+        column-gap: 31px;
+    } 
+    .footer__nav-list {
+        display: grid;
+        grid-template-columns: 111px 30px 106px !important;
+        height: 184px; 
+    } 
+    .footer__form {
+        width: 450px;
+        margin-right: 20px;
+        padding-left: 31px;
+    } 
+    .footer__social {
+       margin-top: 26px;
+    }
+    .footer__info {
+        width: 728px;
+        margin-top: 183px !important;
+        
+    }
+    .footer__form {
+        padding-left: 0 !important;
+        padding-top: 23px !important;
+    }
+    input {
+        width: 375px !important;
+    }
+    .footer__p {
+        width: 444px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .header__burger {
+        display: flex;
+        padding-left: 220px;
+       }
+    .articles-filter {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        height: 32px;
+    }
+    .articles {
+        grid-template-columns: 100%;
+        grid-template-rows: 206px 1fr !important;
+        
+    }
+    .article__title__font-size {
+        font-size: 32px !important;
+    }
+    .articles:nth-child(n+1) {
+        grid-column: 1 / 7 !important;
+    }
+    .main-content__layout {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 0;
+    }
+    .main__content {
+        display: grid;
+        grid-template-columns: 374px !important;
+        grid-column: span 1;
+    }
+    .aside__content-layout {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        margin-top: 0;
+    }
+    .article-section {
+        grid-column: span 1;
+    }
+    .article__content {
+        width: 351px;
+    }
+    .article__title {
+        width: 374px;  
+    }
+    .articles__box-size {
+        width: 374px;
+    }
+    .artcile__content-title-h3 {
+        height: 304px;
+    }
+    .article__content-citation {
+        margin-top: 24px;
+        width: 374px;
+        height: 218px;
+    }
+    .article__image {
+        background-image: url(../img/womanswim.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 374px;
+        height: 207px;
+    }
+    .article__content-image-text {
+        display: flex;
+        flex-direction: column;
+    }
+    .article__content-image-image {
+        width: 374px;
+        height: 380px;
+    }
+    .article__content-content_text {
+     padding-left: 0;
+     margin-top: 0;
+    }
+    .articles__content-two_images_box {
+        display: grid;
+        grid-template-columns: 374px;
+        column-gap: 24px;
+    }
+    .images-item {
+        display: flex;
+        height: auto;
+    }
+    .aside__content {
+        display: grid;
+        grid-column: span 1 !important;
+    }
+    .footer {
+        margin-top: 59px;
+        height: 746px !important;
+    }
+    .footer__layout {
+        width: 374px;
+    }
+    .footer__grid {
+        display: grid !important;
+        grid-template-columns: 375px !important;
+        grid-template-rows: repeat(3, auto);
+        column-gap: 31px;
+    } 
+    .footer__nav-list {
+        display: grid;
+        grid-template-columns: 111px auto 106px !important;
+        height: 184px; 
+    } 
+    .footer__info {
+        width: 374px;
+        margin-top: 397px !important;
+        display: flex;
+        flex-direction: column !important;
+    }
+    .footer__p {
+        width: 375px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .grid__layout {
+        column-gap: 0;
+    }
+    .header__layout {
+        width: 288px;
+    }
+    .header__burger {
+        display: flex;
+        padding-left: 180px;
+       }
+       .article__title__font-size {
+        font-size: 24px !important;
+    }
+       .footer__grid {
+        grid-template-columns: 288px !important;
+        padding-top: 35px !important;
+    }    
+    input {
+        margin-top: 8px;
+        width: 288px !important;
+        background-image: none !important;
+    }
+    .footer {
+        width: 320px !important;
+    }
+    .footer__layout {
+        width: 288px;
+    }
+    .footer__nav-list {
+        display: grid;
+        grid-template-columns: 111px 71px 106px !important;
+    }    
+    .footer__input {
+        background-image: none;
+    }
+    .footer__form {
+        width: 288px;
+        margin-right: 14px;
+    }
+    .footer__form-box {
+        width: 260px !important;
+        
+    }
+    .footer__info {
+        width: 288px;
+        margin-top: 390px !important;
+    }
+    .footer__p {
+        width: 288px !important;
+    }   
+}
