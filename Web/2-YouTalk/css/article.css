@@ -22,21 +22,21 @@ body {
     display: grid;
     grid-template-areas: 
     ". header ."
-    "header_line header_line header_line"
+    "header__line header__line header__line"
     ". content ."
     "footer footer footer";
     grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);
     grid-template-rows: auto 1px 1fr auto;
     column-gap: 24px;
     height: 100vh;
-    background-image: url('../img/bigpinkbulb.png');
+    /* background-image: url('../img/bigpinkbulb.png');
     background-repeat: no-repeat;
-    background-position: 1280px 2550px;
+    background-position: 1280px 2550px; */
 }
 .main-content__layout {
     display: grid;
     grid-template-columns: repeat(12, minmax(46px, 78px));
-    grid-gap: 20px;
+    grid-gap: 24px;
 }
 .main__content {
     grid-column: 1 / 8;
@@ -76,7 +76,7 @@ body {
     grid-column: 1 / 8;
 }
 .articles__box-size {
-    width: 690px;
+    width: 100%;
 }
 .article__list-style {
     font-size: 16px;
@@ -336,7 +336,7 @@ body {
     padding-top: 24px;
 }
 
-.article__content-bottom_image {
+.article__content-bottom--image {
     padding-left: 303px;
 } 
 .button-bottom__size {
@@ -346,11 +346,12 @@ body {
     margin-top: 32px;
 }
 
-.article__content-bottom_image__right {
+/* .article__content-image--right {
     position: absolute;
-    padding-left: 1380px;
-    padding-top: 5380px;
-}
+    padding-left: 315px;
+    /* padding-left: 1380px;
+    padding-top: 5380px; 
+} */
 .aside__content-layout {
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -544,13 +545,3 @@ body {
     width: 108px;
 }
 
-.footer {
-    z-index: 2;
-}
-.footer__background {
-    background-image: url('../img/background.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: #fff;
-    z-index: 1;
-}
