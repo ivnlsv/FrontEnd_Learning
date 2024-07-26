@@ -212,6 +212,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     text-align: justify;
+    padding: 0;
 }
 
 .article__content-content_quote {
@@ -241,6 +242,9 @@ body {
     margin-top: 0;
     padding-left: 24px;
    
+}
+.article__image__two {
+    width: 690px;
 }
 .article__content-exercise {
     background-color: #FEFAEC;

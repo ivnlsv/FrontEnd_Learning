@@ -16,7 +16,7 @@ button {
     display: grid;
     grid-template-areas: 
     ". header ."
-    "header_line header_line header_line"
+    "header__line header__line header__line"
     ". content ."
     "footer footer footer";
     grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);

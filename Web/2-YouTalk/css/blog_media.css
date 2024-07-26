@@ -1,9 +1,4 @@
 @media screen and (max-width: 1920px) {
-    .grid__layout {
-        background-image: url('../img/bigpinkbulb.png');
-        background-repeat: no-repeat;
-        background-position: 1690px 2550px;
-    }
     .header__burger {
         display: none;
     }
