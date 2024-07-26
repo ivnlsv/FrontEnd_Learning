@@ -31,7 +31,7 @@
         width: 690px;
     }
     .article__content-content_text {
-        width: 642px;
+        width: 100%;
     }
     .images-item {
         width: 333px; 
@@ -450,8 +450,6 @@
         padding: 20px;
     }
     .article__content-exercise {
-        padding: 16px;
-        width: 342px !important;
         height: 280px;        
     }
     .article__content-exercise_title {

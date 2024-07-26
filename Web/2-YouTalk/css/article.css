@@ -262,9 +262,13 @@ body {
 .content-exercise {
     text-align: justify;
     margin-top: 8px;
-    padding-left: 24px;
+    /* padding-left: 24px;
     padding-right: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 24px; */
+}
+blockquote {
+    margin-inline-start: 24px;
+    margin-inline-end: 24px;
 }
 .excercise__two {
     background-color: #FFF3EB;
