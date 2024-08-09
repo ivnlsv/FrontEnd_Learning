@@ -80,7 +80,7 @@
     padding-left: 24px;
   }
   .books__list-button {
-    margin-top: 24px;
+    margin: 24px 0;
     justify-content: center;
   }
 }
