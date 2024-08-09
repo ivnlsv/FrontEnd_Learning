@@ -131,6 +131,10 @@ html, body {
   justify-content: flex-start;
 }
 
+.header__icon {
+  cursor: pointer;
+}
+
 .header__icon:nth-child(2) {
   padding-left: 40px;
   padding-right: 40px;
