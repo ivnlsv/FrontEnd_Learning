@@ -1,0 +1,373 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght,YTLC@0,6..12,200..1000,440..540;1,6..12,200..1000,440..540&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One&display=swap");
+@media screen and (max-width: 1024px) {
+  .header__layout, .promo__layout, .slider__images {
+    width: 90vw;
+  }
+  .image {
+    width: 75vw;
+    height: 601px;
+  }
+  .promo__box-one {
+    top: 150px;
+    left: -40px;
+  }
+  .promo__box-two {
+    left: -40px;
+  }
+  .books__layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__menu--list {
+    padding-left: 20px;
+  }
+}
+html, body {
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  margin-top: 0;
+  padding-top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.header__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1120px;
+  margin: 36px auto 29px auto;
+}
+
+.header__menu--list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.header__menu--item {
+  padding-right: 40px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #5c6a79;
+  text-decoration: none;
+}
+
+.header__icons {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__icon:nth-child(2) {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.header__cart {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.basket__item {
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  border-radius: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  width: 13px;
+  height: 13px;
+  background-color: red;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  position: absolute;
+  right: 2px;
+  transform: translate(50%, 50%);
+}
+
+.promo__layout {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px;
+  padding-top: 117px;
+}
+
+.promo__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 11px 22px 50px rgba(181, 181, 181, 0.5);
+  z-index: 2;
+}
+
+.promo__box-link {
+  text-decoration: none;
+  color: #1c2a39;
+}
+
+.promo__box-one {
+  position: absolute;
+  background-color: #9e98dc;
+  width: 149px;
+  height: 204px;
+  border: none;
+  right: -90px;
+  top: 225px;
+}
+
+.promo__box-two {
+  position: absolute;
+  background-color: #ff8fe6;
+  width: 152px;
+  height: 273px;
+  border: none;
+  top: 500px;
+  right: -180px;
+}
+
+.promo__box-text {
+  width: 109px;
+  height: 66px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.promo__box-icon {
+  width: 55px;
+  height: 12px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.slider__images {
+  position: relative;
+  width: 1120px;
+  height: 702px;
+}
+
+.slider__images .image {
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 800ms ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider__images .image.active {
+  opacity: 1;
+}
+
+.promo__image {
+  position: absolute;
+  z-index: 999;
+}
+
+.one {
+  right: -105px;
+  top: 75px;
+}
+
+.two {
+  top: 350px;
+  right: -160px;
+}
+
+.slider__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.slider__dots-item {
+  width: 12px;
+  height: 12px;
+  background: #efeef6;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.slider__dots-item:hover,
+.slider__dots-item.active {
+  background: #9e98dc;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  margin-top: 105px;
+  width: 416px;
+  height: 710px;
+  background-color: #efeef6;
+}
+
+.categories {
+  margin: 0;
+  padding-left: 0;
+  margin-top: 45px;
+  list-style: none;
+  width: 200px;
+}
+
+.category {
+  font-size: 12px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.category:before {
+  content: "•";
+  padding-right: 8px;
+  padding-left: 0;
+  color: #efeef6;
+  font-size: 24px;
+}
+
+.category__active {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.category__active:before {
+  content: "•";
+  color: #756ad3;
+  padding-right: 8px;
+  padding-left: 0;
+}
+
+.aside__menu--item.active {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  list-style: circle;
+  color: #756ad3;
+  z-index: 0;
+}
+
+.button {
+  border: solid 1px #4c3db2;
+  color: #4c3db2;
+  background-color: #fff;
+  padding: 18px 66px;
+  font-size: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button__cart {
+  border-color: #efeef6;
+  color: #5c6a79;
+  padding: 18px 55px 18px 66px;
+}
+
+.books {
+  position: relative;
+  margin-bottom: 74px;
+}
+
+.books__list {
+  position: absolute;
+  z-index: 2;
+  left: 356px;
+  top: 46px;
+}
+
+.books__layout {
+  display: grid;
+  grid-template-columns: repeat(2, 424px);
+  grid-template-rows: repeat(3, 300px);
+  -moz-column-gap: 76px;
+       column-gap: 76px;
+  row-gap: 96px;
+}
+
+.book__card--layout {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+.book__card-image {
+  margin: 0;
+  padding: 0;
+  width: 212px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 6px 50px 50px rgb(239, 238, 246);
+}
+
+.book__card-info {
+  padding: 36px 0 36px 36px;
+}
+
+.books__list-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 96px;
+}
+
+.book__author,
+.book__descr,
+.book__raiting {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  color: #5c6a79;
+}
+
+.book__author {
+  margin-bottom: 4px;
+}
+
+.book__title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.book__price {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.book__raiting {
+  margin-top: 4px;
+  margin-bottom: 0;
+}/*# sourceMappingURL=main.css.map */

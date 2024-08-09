@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
     margin: 0;
+    padding: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
@@ -29,9 +30,9 @@ body {
     grid-template-rows: auto 1px 1fr auto;
     column-gap: 24px;
     height: 100vh;
-    /* background-image: url('../img/bigpinkbulb.png');
+    background-image: url('../img/bigpinkbulb.png');
     background-repeat: no-repeat;
-    background-position: 1280px 2550px; */
+    background-position: 1280px 2550px;
 }
 .main-content__layout {
     display: grid;
@@ -80,15 +81,18 @@ body {
 }
 .article__list-style {
     font-size: 16px;
+    font-weight: 500;
     text-decoration: underline;
 }
 .article__list-subtitle_style {
     list-style: none;
 }
-.article__list-style_li {
+.article__list-style--li {
     padding: 4px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
 }
-.article__list-style_li::marker {
+.article__list-style--li::marker {
     color: #16C8BB;
 }
 .artcile__list-subtitle {
@@ -103,12 +107,17 @@ body {
     margin-top: 24px;
     width: 690px;
 }
-.article__author {
+.article__self {
+    color: #2963A3;
+}
+.article__content {
+    padding: 20px;
+}
+.article__author--row {
+    margin-top: 16px;
+    margin-bottom: 24px;
     font-size: 14px;
     font-weight: 400;
-}
-.article__author-raw {
-    margin-top: 16px;
 }
 .artcile__content-contents {
     margin-top: 37px;
@@ -118,6 +127,10 @@ body {
 .h3__title {
     width: 463px;
 }
+.artcile__list-subtitle {
+    list-style: none;
+
+}
 .artcile__content-title-h3 {
     display: grid;
     grid-template-rows: repeat(2,auto);
@@ -126,7 +139,7 @@ body {
 
 }
 .article__content-citation {
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -134,7 +147,7 @@ body {
     border-radius: 16px;
     width: 690px;
 }
-.article__content-citation_text {
+.article__content-citation--text {
     font-size: 16px;
     font-style: italic;
     padding-top: 34px;
@@ -143,7 +156,7 @@ body {
     padding-bottom: 8px;
     z-index: 2;
 }
-.article__content-citation_image {
+.article__content-citation--image {
     position: absolute;
     top: 24px;
     left: 24px;
@@ -153,7 +166,7 @@ body {
     padding-top: 24px;
     width: 690px;
 }
-.article__content-citation_author {
+.article__content-citation--author {
     font-size: 16px;
     font-weight: bold;
     padding-top: 8px;
@@ -166,12 +179,12 @@ body {
     flex-direction: row;
     align-items: baseline;
 }
-.author-raw__breadcrump::after {
+.author-row__breadcrump::after {
     content: '\00B7';
     padding: 8px;  
     font-size: 12px;
 }
-.author-raw__breadcrump:nth-child(2)::after {
+.author-row__breadcrump:nth-child(3)::after {
     content: none;
    
 }
@@ -195,8 +208,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-.article__content-image_caption {
+.article__content-image--caption {
     padding-top: 16px;
+    padding-bottom: 24px;
     font-size: 14px;
     font-weight: 400;
     color: #868686;
@@ -215,25 +229,29 @@ body {
     padding: 0;
 }
 
-.article__content-content_quote {
+.article__content-quote {
     background-image: url('../img/pinkbulb.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 240px 168px;
     height: 168px;
 }
-.article__content-content_quote-text {
+.article__content-quote--text {
     display: flex;
     align-items: center;
     font-size: 16px;
     font-style: italic;
     color: #333333;
-    margin-top: 24px;
+    margin-top: 30px;
     margin-left: 102px;
+    margin-right: 104px;
 }
 .article__content-image-text {
     display: flex;
     flex-direction: row;
+}
+.article__content-content--text {
+    line-height: 1.5;
 }
 .article__content-image-image {
     width: 282px;
@@ -243,7 +261,7 @@ body {
     padding-left: 24px;
    
 }
-.article__image__two {
+.article__image--two {
     width: 690px;
 }
 .article__content-exercise {
@@ -254,7 +272,7 @@ body {
     border-radius: 16px;
     justify-content: center;
 }
-.article__content-exercise_title {
+.article__content-exercise--title {
     margin-top: 24px;
     padding-left: 24px;
     font-weight: bold;
@@ -276,7 +294,7 @@ blockquote {
 .image {
     height: 174px;
 }
-.articles__content-two_images_box {
+.articles__content-two--images-box {
     display: grid;
     grid-template-columns: 333px 333px;
     column-gap: 24px;
@@ -293,7 +311,7 @@ blockquote {
 .green {
     background-color: rgba(3, 178, 165, 0.1)
 } 
-.section_line {
+.section__line {
     width: 1200px;
     border-top: solid 1px #DEDEDE;
     margin-top: 48px;
@@ -320,25 +338,30 @@ blockquote {
     flex-direction: column;
     grid-template-columns: repeat(2, 1fr);
    /*  margin-top: 72px;*/
-} 
+}
+.bottom__content {
+    background-image: url('../img/pinkfigure.png');
+    background-repeat: no-repeat;
+    background-position: 1200px 50px;
+}
 .article__content-bottom {
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin-top: 72px;
 }
-.article__content-bottom_layout {
+.article__content-bottom--layout {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     width: 348px;
     height: 162px;
     /* margin-top: 72px; */
-    z-index: 3;
+    /* z-index: 3; */
 }
-.article__content-bottom__title {
+.article__content-bottom--title {
     font-size: 48px;
     font-weight: bold;
 }
-.article__content-bottom__text {
+.article__content-bottom--text {
     font-size: 18px;
     font-weight: 400;
     padding-top: 24px;
@@ -346,6 +369,7 @@ blockquote {
 
 .article__content-bottom--image {
     padding-left: 303px;
+   
 } 
 .button-bottom__size {
     background-color: #16C8BB;
@@ -354,12 +378,11 @@ blockquote {
     margin-top: 32px;
 }
 
-/* .article__content-image--right {
+.article__content-image--right {
     position: absolute;
     padding-left: 315px;
-    /* padding-left: 1380px;
-    padding-top: 5380px; 
-} */
+
+}
 .aside__content-layout {
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -375,13 +398,13 @@ blockquote {
     height: 518px;
     border: solid 1px #DEDEDE;
 }
-.aside__content-boxes_layout {
+.aside__content-boxes--layout {
     display: grid;
     grid-template-rows: repeat(3, auto);
     row-gap: 24px;
     padding: 24px;
 }
-.aside__content-boxes_layout__box-two {
+.aside__content-boxes-layout-box-two {
     row-gap: 16px;
     padding: 16px 16px 36px 16px;
 }
@@ -390,7 +413,10 @@ blockquote {
     border: none;
     z-index: 1;
 }
-.aside__content-boxes_image {
+.button__box-one {
+    margin-top: 24px;
+}
+.aside__content-boxes--image {
     background-image: url(../img/threepaintedpeople.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -410,6 +436,7 @@ blockquote {
     background-image: url(../img/daritezabotu.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 .box__four {
     margin-top: 42px;
@@ -425,18 +452,18 @@ blockquote {
     position: absolute;
     z-index: 3; 
 }
-.aside__content-boxes__title {
+.aside__content-boxes--title {
     display: flex;
     flex-direction: column;
     text-align: center;
     font-weight: bold;
 }
-.aside__content-boxes__title__list {
+.aside__content-boxes-title--list {
     font-size: 16px;
     font-weight: bold;
 }
 
-.aside__content-boxes__text {
+.aside__content-boxes--text {
     padding-top: 8px; 
     text-align: center; 
     font-size: 14px;
@@ -448,7 +475,7 @@ blockquote {
 .button__box-two {
     width: 250px;
 }
-.aside__content-box-two__icons-box {
+.aside__content-box-two--icons-box {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
@@ -459,7 +486,7 @@ blockquote {
     transform: translateY(-150px);
 }
 
-.aside__content-box-two__icons-item {
+.aside__content-box-two--icons-item {
     display: flex;
     border: none;
     border-radius: 6px;
@@ -487,10 +514,10 @@ blockquote {
     font-weight: 500;
     padding: 3px 3px 3px 4px;
 }
-.box-two__icons-item__size {
+.box-two__icons-item--size {
     width: 74px;
 }
-.aside__content-box-two__image {
+.aside__content-box-two--image {
     border: none;
     border-radius: 50%;
     width: 120px;
@@ -517,20 +544,11 @@ blockquote {
     font-size: 14px;
     font-weight: 400;
 }
-.aside__box-two__list {
-    margin-top: 16px;
-    list-style: none;
-    margin: 0 0 10px 0;
-	padding: 0;
+.aside__box-two--list {
+    margin: 10px 0 0 0;
+	
 }
-.aside__box-two__list li {
-    display: flex;
-    background: url(../icons/list-dot.svg) 0 no-repeat;
-    margin: 7px 0;
-    padding-left: 20px;
-}
-
-.aside__content-box-four__title {
+.aside__content-box-four--title {
     font-size: 18px;
     font-style: bold;
     color: #2963A3;
@@ -551,5 +569,12 @@ blockquote {
 }
 .button__buy {
     width: 108px;
+}
+.footer__background {
+    position: absolute;
+    margin-top: 5820px;
+    height: 300px;
+    opacity: 0.5;
+    z-index: 0;
 }
 

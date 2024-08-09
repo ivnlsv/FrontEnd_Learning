@@ -26,7 +26,7 @@
 }
 .header__menu {
     display: grid;
-    grid-column:  2 / 9;
+    grid-column:  2 / 10;
 } 
 .header__menu > ul{
     display: flex;
@@ -37,8 +37,7 @@
     list-style: none;
 }
 .header__button--layout {
-    display: grid;
-    grid-column: 11;
+    margin-left: 90px;
 }
 .header__button {
     background-color: #E3F5F5;

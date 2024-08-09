@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght,YTLC@0,6..12,200..1000,440..540;1,6..12,200..1000,440..540&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='dist/main.css')
+    title Bookshop
+  body
+    header.header
+      .header__layout
+        .header__logo
+          img(src='../img/logo-bookshop.png' alt='logo')
+        .header__menu
+          ul.header__menu--list
+            li
+              a.header__menu--item(href='#') books
+            li
+              a.header__menu--item(href='#') audiobooks
+            li
+              a.header__menu--item(href='#') stationery & gifts
+            li
+              a.header__menu--item(href='#') blog
+        .header__icons
+          .header__icon
+            img(src='../icons/user.svg' alt='user_icon')
+          .header__icon
+            img(src='../icons/search.svg' alt='search_icon')
+          .header__icon.header__cart
+            img(src='../icons/shopbag.svg' alt='shopbag_icon')
+          .basket__item
+          .badge.cart__count 0
+    section.promo
+      .promo__layout
+        .slider__images
+        .slider__dots
+        .promo__box.promo__box-one
+          a.promo__box-link(href='#')
+            p.promo__box-text Change old book on new
+            img.promo__box-icon(src='../img/arrow.svg' alt='black arrow')
+        .promo__box.promo__box-two
+          a.promo__box-link(href='#')
+            p.promo__box-text Top 100 books 2022
+            img.promo__box-icon(src='../img/arrow.svg' alt='black arrow')
+    section.books
+      main.books__list
+        .books__layout
+        .books__list-button
+          button.button.more(type='button') load more
+      aside.sidebar
+        ul.categories
+          li.category.category__active Architecture
+          li.category Art & Fashion
+          li.category Biography
+          li.category Business
+          li.category Crafts & Hobbies
+          li.category Drama
+          li.category Fiction
+          li.category Food & Drink
+          li.category Health & Wellbeing
+          li.category History & Politics
+          li.category Humor
+          li.category Poetry
+          li.category Psychology
+          li.category Science
+          li.category Technology
+          li.category Travel & Maps
+    script(src='dist/main.js')

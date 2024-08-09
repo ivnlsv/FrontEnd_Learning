@@ -3,7 +3,8 @@
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    background-image: url('../img/background.png') no-repeat;
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;   
     background-position: 0 450px;
     background-size: 100%;
 }
@@ -31,7 +32,7 @@ button {
 .content {
     grid-area: content;
 }
-.header_line {
+.header__line {
     grid-area: header_line;
     width: 100%;
     border-top: solid 1px #EFF5FB;
