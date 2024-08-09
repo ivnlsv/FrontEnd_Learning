@@ -21,11 +21,12 @@ export function getBooks(category) {
                 const bookCard = document.createElement('div');
                 bookCard.classList.add('book__card--layout');
 
-                const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : '';
+                const thumbnail = book.volumeInfo.imageLinks.thumbnail ?? '../img/placeholder.jpg';
                 const author = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : '';
                 const title = book.volumeInfo.title;
-                const ratingsCount = book.volumeInfo.ratingsCount ? `Ratings: ${book.volumeInfo.ratingsCount}` : '';
-                                
+                const averageRating = book.volumeInfo.averageRating;
+                const ratingsCount = book.volumeInfo.ratingsCount ? `${book.volumeInfo.ratingsCount} reviews` : '';
+                         
                 let description = book.volumeInfo.description ? book.volumeInfo.description : '';
                 const maxLength = 3 * 60; 
                 if (description.length > maxLength) {
@@ -33,14 +34,29 @@ export function getBooks(category) {
                 }
                                 
                 const retailPrice = book.saleInfo && book.saleInfo.listPrice && book.saleInfo.listPrice.amount ? `${book.saleInfo.listPrice.amount} ${book.saleInfo.listPrice.currencyCode}` : '';
+                let stars = '';
+         for (let i = 0; i < averageRating; i++) {
+           stars += 
+           `<span class="star">
+                    <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
+                    </svg>
+                
+            </span>`;
+         }
+     
+         for (let i = averageRating; i < 5; i++) {
+           stars += `<span class="grey-star"><svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+           <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
+           </svg></span>`;
+         }  
 
-
-                           bookCard.innerHTML = `
+                bookCard.innerHTML = `
                     <img src="${thumbnail}" class="book__card-image" alt="Thumbnail">
                     <div class="book__card-info">
                         <p class="book__author">${author}</p>
                         <p class="book__title">${title}</p>
-                        <p class="book__raiting">${ratingsCount}</p>
+                        <p class="book__raiting">${stars}&nbsp;${ratingsCount}</p>
                         <p class="book__descr">${description}</p>
                         <p class="book__price">${retailPrice}</p>
                        <button data-id="${book.id}" class='button btn__buy'>${booksStorage.includes(book.id) ? 'In The Cart' : 'Buy Now'}</button>

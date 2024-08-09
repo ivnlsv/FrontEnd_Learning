@@ -6,15 +6,15 @@
     width: 90vw;
   }
   .image {
-    width: 75vw;
+    width: 25vw;
     height: 601px;
   }
   .promo__box-one {
     top: 150px;
-    left: -40px;
+    right: -40px;
   }
   .promo__box-two {
-    left: -40px;
+    right: -40px;
   }
   .books__layout {
     display: flex;
@@ -24,6 +24,64 @@
 @media screen and (max-width: 768px) {
   .header__menu--list {
     padding-left: 20px;
+  }
+  .image {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .slider__images,
+  .slider__dots,
+  .promo__box {
+    display: none;
+  }
+  .header__layout {
+    flex-direction: column;
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  .header__menu--list {
+    padding: 0;
+  }
+  .header__menu--item {
+    text-align: center;
+    padding-right: 10px;
+  }
+  .sidebar {
+    width: 200px;
+  }
+  .books__list {
+    position: absolute;
+    z-index: 2;
+    left: 156px;
+    top: 46px;
+  }
+  .books__layout {
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+    row-gap: 16px;
+  }
+  .book__card--layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+  }
+  .book__card-info {
+    text-align: center;
+    padding: 16px;
+  }
+  .book__author {
+    text-align: center;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 24px;
+  }
+  .books__list-button {
+    margin-top: 24px;
+    justify-content: center;
   }
 }
 html, body {
@@ -339,7 +397,7 @@ html, body {
 .books__list-button {
   display: flex;
   justify-content: center;
-  margin-top: 96px;
+  margin: 96px 74px;
 }
 
 .book__author,
@@ -368,6 +426,17 @@ html, body {
 }
 
 .book__raiting {
+  display: flex;
+  flex-direction: row;
+  margin-right: 6px;
   margin-top: 4px;
   margin-bottom: 0;
+}
+
+.star {
+  fill: #fece3c;
+}
+
+.grey-star {
+  fill: #EEEDF5;
 }/*# sourceMappingURL=main.css.map */

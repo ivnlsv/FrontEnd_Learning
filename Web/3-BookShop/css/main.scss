@@ -280,7 +280,8 @@ html, body {
 .books__list-button {
   display: flex;
   justify-content: center;
-  margin-top: 96px;
+  margin: 96px 74px;
+  
 }
 .book__author,
 .book__descr,
@@ -304,6 +305,18 @@ html, body {
   font-weight: bold;
 }
 .book__raiting {
+  display: flex;
+  flex-direction: row;
+  margin-right: 6px;
   margin-top: 4px;
   margin-bottom: 0;
 }
+.star {
+  fill:  #fece3c;
+  
+}
+  
+.grey-star {
+  fill: #EEEDF5;
+}
+
