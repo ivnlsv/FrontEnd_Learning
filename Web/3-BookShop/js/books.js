@@ -1,12 +1,10 @@
 let startIndex = 0;
 const apiKey = "AIzaSyAyesH5aiGQBMpFU6HXqziqeSrxRSuJiL8";
-
 const booksStorage = JSON.parse(localStorage.getItem('cart')) ?? [];
 
 function getBooks(category) {
     const query = `subject:${encodeURIComponent(category)}`;
-    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict=en`;
-
+    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict=en;
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -41,16 +39,13 @@ function getBooks(category) {
                     <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                     <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
                     </svg>
-                
             </span>`;
          }
-     
          for (let i = averageRating; i < 5; i++) {
            stars += `<span class="grey-star"><svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
            <path d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
            </svg></span>`;
          }  
-
                 bookCard.innerHTML = `
                     <img src="${thumbnail}" class="book__card-image" alt="Thumbnail">
                     <div class="book__card-info">
@@ -70,11 +65,9 @@ function getBooks(category) {
             console.error('Ошибка при загрузке данных:', error);
         });
     }
-
 document.addEventListener('DOMContentLoaded', () => {
     const cartCount = document.querySelector('.cart__count');
     const booksStorage = JSON.parse(localStorage.getItem('cart')) ?? [];
-
     function updateCartCount() {
         cartCount.innerText = booksStorage.length;
         if (booksStorage.length > 0) {
@@ -84,14 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     updateCartCount();
-
     const categoryItems = document.querySelectorAll('.category');
     let initialCategory = '';
     categoryItems.forEach(item => {
         if (item.classList.contains('sidebar-active')) {
             initialCategory = item.textContent.trim();
         }
-
         item.addEventListener('click', () => {
             document.querySelector('.category.category__active').classList.remove('category__active');
             item.classList.add('category__active');
@@ -100,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
             getBooks(category);
         });
     });
-
     document.addEventListener('click', (event) => {
         if(event.target.classList.contains('btn__buy')) {                  
             const id = event.target.getAttribute('data-id');
