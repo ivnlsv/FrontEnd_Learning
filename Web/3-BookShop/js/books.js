@@ -10,7 +10,7 @@ function getBooks(category) {
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Ошибка связи');
+                throw new Error('Ошибка соединения');
             }
             return response.json();
         })
