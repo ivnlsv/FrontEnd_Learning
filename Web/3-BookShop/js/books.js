@@ -3,7 +3,7 @@ const apiKey = "AIzaSyAyesH5aiGQBMpFU6HXqziqeSrxRSuJiL8";
 
 const booksStorage = JSON.parse(localStorage.getItem('cart')) ?? [];
 
-export function getBooks(category) {
+function getBooks(category) {
     const query = `subject:${encodeURIComponent(category)}`;
     const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict=en`;
 
