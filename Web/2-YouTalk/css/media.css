@@ -1,15 +1,6 @@
 @media screen and (max-width: 1920px) {
-  /* .grid__layout {
-        background-image: url('../img/bigpinkbulb.png');
-        background-repeat: no-repeat;
-        background-position: 1690px 2550px;
-    } */
-  .header__burger {
-    display: none;
-  }
-  
-  .footer__layout {
-    margin: 40px 420px 24px 420px;
+  .grid__layout {
+    background-position: 1685px 2500px;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -74,7 +65,7 @@
     border: none;
   }
   .header__layout {
-    column-gap: 13px;
+    column-gap: 12px;
   }
   .header__menu {
     grid-column: 2 / 11;
@@ -95,7 +86,6 @@
     padding: 24px 20px;
   }
   .aside__content-boxes {
-    grid-column: 10 / 13;
     width: 222px;
   }
   .aside__content-boxes--title {
@@ -135,7 +125,7 @@
     height: 292px;
   }
   .aside__content-box-two--image {
-    transform: translateX(45px);
+    transform: translateX(-15px);
   } 
   .aside__box-two--list {
     padding-left: 20px;
@@ -192,13 +182,13 @@
   .header__button--layout {
     grid-column: 12;
   }
-  .articles:nth-child(-n + 3) {
-    grid-template-rows: 404px 1fr;
-  }
-  .articles:nth-child(n + 3) {
-    grid-template-rows: 206px 1fr;
-    grid-column: span 3;
-  }
+  /* .articles:nth-child(-n + 3) { */
+  /*   grid-template-rows: 404px 1fr; */
+  /* } */
+  /* .articles:nth-child(n + 3) { */
+  /*   grid-template-rows: 206px 1fr; */
+  /*   grid-column: span 3; */
+  /* } */
   .main-content__layout {
     display: grid;
     grid-template-columns: repeat(12, 46px);
@@ -239,6 +229,7 @@
   }
 
   .aside__content {
+    margin: 0;
     grid-column: 1 / 13 !important;
     height: 759px;
   }
@@ -292,8 +283,8 @@
   .box__two {
     margin-top: 0;
   }
-  .aside__content-box-two__image {
-    transform: translateX(55px);
+  .aside__content-box-two--image {
+    transform: translateX(45px);
   }
   .box-two-experience__box {
     display: flex;
@@ -324,9 +315,9 @@
     height: 454px !important;
     /* width: 728px; */
   }
-  .footer__layout {
-    margin: 35px 20px 23px 20px;
-  }
+  /* .footer__layout { */
+  /*   padding: 35px 20px 23px 20px; */
+  /* } */
   .footer__content {
     display: flex;
     flex-flow: row wrap;

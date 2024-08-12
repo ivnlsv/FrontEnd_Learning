@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: row;
   column-gap: 91px;
-  /* align-items: flex-start; */
 }
 .footer__nav--list {
     list-style: none;
