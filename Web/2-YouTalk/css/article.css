@@ -22,17 +22,16 @@ body {
 .grid__layout {
     display: grid;
     grid-template-areas: 
-    ". header ."
-    "header__line header__line header__line"
-    ". content ."
-    "footer footer footer";
-    grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);
-    grid-template-rows: auto 1px 1fr auto;
+    ". content .";
+    grid-template-columns: minmax(16px, auto) minmax(288px, 1440px) minmax(16px, auto);
     column-gap: 24px;
     height: 100vh;
     background-image: url('../img/bigpinkbulb.png');
     background-repeat: no-repeat;
-    background-position: 1280px 2550px;
+    background-position: 1685px 2550px;
+}
+.content {
+    grid-area: content;
 }
 .main-content__layout {
     display: grid;
@@ -333,13 +332,12 @@ blockquote {
     display: flex;
     flex-direction: column;
     grid-template-columns: repeat(2, 1fr);
-   /*  margin-top: 72px;*/
 }
-.bottom__content {
+.bottom__content { 
     background-image: url('../img/pinkfigure.png');
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-position: 1200px 50px;
-}
+ } 
 .article__content-bottom {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -374,7 +372,7 @@ blockquote {
 
 .article__content-image--right {
     position: absolute;
-    padding-left: 315px;
+    padding-left: 432px;
 
 }
 .aside__content-layout {
@@ -440,8 +438,6 @@ blockquote {
     background-repeat: no-repeat;
     background-position: 160px 220px;
 }
-
-
 .image__three {
     display: block;
     position: absolute;
@@ -530,7 +526,7 @@ blockquote {
 
 .box__two_title__list {
     font-size: 16px;
-    text-align: left !important;
+    text-align: left;
 }
 .box-two__experience {
     padding-bottom: 8px;
@@ -565,11 +561,3 @@ blockquote {
 .button__buy {
     width: 108px;
 }
-.footer__background {
-    position: absolute;
-    margin-top: 5820px;
-    height: 300px;
-    opacity: 0.5;
-    z-index: 0;
-}
-
