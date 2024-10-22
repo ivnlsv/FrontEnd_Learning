@@ -41,7 +41,7 @@ export const Card = () => {
               <IconRemove />
             </CardButton>
           </CardTitleBlock>
-          {task.description ? (
+          
             <textarea
               onChange={(e) =>
                 setTask({
@@ -51,7 +51,7 @@ export const Card = () => {
               }
               value={task.description}
             />
-          ) : (
+          {task.description ? '' : (
             <CardNoDescription>This task has no description</CardNoDescription>
           )}
 
