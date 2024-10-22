@@ -1,10 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-//import {Button} from "../../shared/buttons/button/button";
-//import {IconRemove} from "../../shared/icons/icon-remove";
 import { useTasks } from "../../../hooks/use-task";
 import { useEffect, useState } from "react";
-//import Scrollbars from "react-custom-scrollbars-2";
 import {
   CardBlock,
   CardBody,
